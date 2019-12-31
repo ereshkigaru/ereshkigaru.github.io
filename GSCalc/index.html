@@ -1,324 +1,669 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml"
-xmlns:o="urn:schemas-microsoft-com:office:office"
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
 xmlns:x="urn:schemas-microsoft-com:office:excel"
 xmlns="http://www.w3.org/TR/REC-html40">
 
 <head>
-<meta name="Excel Workbook Frameset">
 <meta http-equiv=Content-Type content="text/html; charset=ks_c_5601-1987">
 <meta name=ProgId content=Excel.Sheet>
 <meta name=Generator content="Microsoft Excel 15">
-<link rel=File-List href="2028.files/filelist.xml">
-<![if !supportTabStrip]>
-<link id="shLink" href="2028.files/sheet001.htm">
-
-<link id="shLink">
-
-<script language="JavaScript">
-<!--
- var c_lTabs=1;
-
- var c_rgszSh=new Array(c_lTabs);
- c_rgszSh[0] = "Sheet1";
-
-
-
- var c_rgszClr=new Array(8);
- c_rgszClr[0]="window";
- c_rgszClr[1]="buttonface";
- c_rgszClr[2]="windowframe";
- c_rgszClr[3]="windowtext";
- c_rgszClr[4]="threedlightshadow";
- c_rgszClr[5]="threedhighlight";
- c_rgszClr[6]="threeddarkshadow";
- c_rgszClr[7]="threedshadow";
-
- var g_iShCur;
- var g_rglTabX=new Array(c_lTabs);
-
-function fnGetIEVer()
-{
- var ua=window.navigator.userAgent
- var msie=ua.indexOf("MSIE")
- if (msie>0 && window.navigator.platform=="Win32")
-  return parseInt(ua.substring(msie+5,ua.indexOf(".", msie)));
- else
-  return 0;
-}
-
-function fnBuildFrameset()
-{
- var szHTML="<frameset rows=\"*,18\" border=0 width=0 frameborder=no framespacing=0>"+
-  "<frame src=\""+document.all.item("shLink")[0].href+"\" name=\"frSheet\" noresize>"+
-  "<frameset cols=\"54,*\" border=0 width=0 frameborder=no framespacing=0>"+
-  "<frame src=\"\" name=\"frScroll\" marginwidth=0 marginheight=0 scrolling=no>"+
-  "<frame src=\"\" name=\"frTabs\" marginwidth=0 marginheight=0 scrolling=no>"+
-  "</frameset></frameset><plaintext>";
-
- with (document) {
-  open("text/html","replace");
-  write(szHTML);
-  close();
- }
-
- fnBuildTabStrip();
-}
-
-function fnBuildTabStrip()
-{
- var szHTML=
-  "<html><head><style>.clScroll {font:8pt Courier New;color:"+c_rgszClr[6]+";cursor:default;line-height:10pt;}"+
-  ".clScroll2 {font:10pt Arial;color:"+c_rgszClr[6]+";cursor:default;line-height:11pt;}</style></head>"+
-  "<body onclick=\"event.returnValue=false;\" ondragstart=\"event.returnValue=false;\" onselectstart=\"event.returnValue=false;\" bgcolor="+c_rgszClr[4]+" topmargin=0 leftmargin=0><table cellpadding=0 cellspacing=0 width=100%>"+
-  "<tr><td colspan=6 height=1 bgcolor="+c_rgszClr[2]+"></td></tr>"+
-  "<tr><td style=\"font:1pt\">&nbsp;<td>"+
-  "<td valign=top id=tdScroll class=\"clScroll\" onclick=\"parent.fnFastScrollTabs(0);\" onmouseover=\"parent.fnMouseOverScroll(0);\" onmouseout=\"parent.fnMouseOutScroll(0);\"><a>&#171;</a></td>"+
-  "<td valign=top id=tdScroll class=\"clScroll2\" onclick=\"parent.fnScrollTabs(0);\" ondblclick=\"parent.fnScrollTabs(0);\" onmouseover=\"parent.fnMouseOverScroll(1);\" onmouseout=\"parent.fnMouseOutScroll(1);\"><a>&lt</a></td>"+
-  "<td valign=top id=tdScroll class=\"clScroll2\" onclick=\"parent.fnScrollTabs(1);\" ondblclick=\"parent.fnScrollTabs(1);\" onmouseover=\"parent.fnMouseOverScroll(2);\" onmouseout=\"parent.fnMouseOutScroll(2);\"><a>&gt</a></td>"+
-  "<td valign=top id=tdScroll class=\"clScroll\" onclick=\"parent.fnFastScrollTabs(1);\" onmouseover=\"parent.fnMouseOverScroll(3);\" onmouseout=\"parent.fnMouseOutScroll(3);\"><a>&#187;</a></td>"+
-  "<td style=\"font:1pt\">&nbsp;<td></tr></table></body></html>";
-
- with (frames['frScroll'].document) {
-  open("text/html","replace");
-  write(szHTML);
-  close();
- }
-
- szHTML =
-  "<html><head>"+
-  "<style>A:link,A:visited,A:active {text-decoration:none;"+"color:"+c_rgszClr[3]+";}"+
-  ".clTab {cursor:hand;background:"+c_rgszClr[1]+";font:9pt 굴림;padding-left:3px;padding-right:3px;text-align:center;}"+
-  ".clBorder {background:"+c_rgszClr[2]+";font:1pt;}"+
-  "</style></head><body onload=\"parent.fnInit();\" onselectstart=\"event.returnValue=false;\" ondragstart=\"event.returnValue=false;\" bgcolor="+c_rgszClr[4]+
-  " topmargin=0 leftmargin=0><table id=tbTabs cellpadding=0 cellspacing=0>";
-
- var iCellCount=(c_lTabs+1)*2;
-
- var i;
- for (i=0;i<iCellCount;i+=2)
-  szHTML+="<col width=1><col>";
-
- var iRow;
- for (iRow=0;iRow<6;iRow++) {
-
-  szHTML+="<tr>";
-
-  if (iRow==5)
-   szHTML+="<td colspan="+iCellCount+"></td>";
-  else {
-   if (iRow==0) {
-    for(i=0;i<iCellCount;i++)
-     szHTML+="<td height=1 class=\"clBorder\"></td>";
-   } else if (iRow==1) {
-    for(i=0;i<c_lTabs;i++) {
-     szHTML+="<td height=1 nowrap class=\"clBorder\">&nbsp;</td>";
-     szHTML+=
-      "<td id=tdTab height=1 nowrap class=\"clTab\" onmouseover=\"parent.fnMouseOverTab("+i+");\" onmouseout=\"parent.fnMouseOutTab("+i+");\">"+
-      "<a href=\""+document.all.item("shLink")[i].href+"\" target=\"frSheet\" id=aTab>&nbsp;"+c_rgszSh[i]+"&nbsp;</a></td>";
-    }
-    szHTML+="<td id=tdTab height=1 nowrap class=\"clBorder\"><a id=aTab>&nbsp;</a></td><td width=100%></td>";
-   } else if (iRow==2) {
-    for (i=0;i<c_lTabs;i++)
-     szHTML+="<td height=1></td><td height=1 class=\"clBorder\"></td>";
-    szHTML+="<td height=1></td><td height=1></td>";
-   } else if (iRow==3) {
-    for (i=0;i<iCellCount;i++)
-     szHTML+="<td height=1></td>";
-   } else if (iRow==4) {
-    for (i=0;i<c_lTabs;i++)
-     szHTML+="<td height=1 width=1></td><td height=1></td>";
-    szHTML+="<td height=1 width=1></td><td></td>";
-   }
-  }
-  szHTML+="</tr>";
- }
-
- szHTML+="</table></body></html>";
- with (frames['frTabs'].document) {
-  open("text/html","replace");
-  charset=document.charset;
-  write(szHTML);
-  close();
- }
-}
-
-function fnInit()
-{
- g_rglTabX[0]=0;
- var i;
- for (i=1;i<=c_lTabs;i++)
-  with (frames['frTabs'].document.all.tbTabs.rows[1].cells[fnTabToCol(i-1)])
-   g_rglTabX[i]=offsetLeft+offsetWidth-6;
-}
-
-function fnTabToCol(iTab)
-{
- return 2*iTab+1;
-}
-
-function fnNextTab(fDir)
-{
- var iNextTab=-1;
- var i;
-
- with (frames['frTabs'].document.body) {
-  if (fDir==0) {
-   if (scrollLeft>0) {
-    for (i=0;i<c_lTabs&&g_rglTabX[i]<scrollLeft;i++);
-    if (i<c_lTabs)
-     iNextTab=i-1;
-   }
-  } else {
-   if (g_rglTabX[c_lTabs]+6>offsetWidth+scrollLeft) {
-    for (i=0;i<c_lTabs&&g_rglTabX[i]<=scrollLeft;i++);
-    if (i<c_lTabs)
-     iNextTab=i;
-   }
-  }
- }
- return iNextTab;
-}
-
-function fnScrollTabs(fDir)
-{
- var iNextTab=fnNextTab(fDir);
-
- if (iNextTab>=0) {
-  frames['frTabs'].scroll(g_rglTabX[iNextTab],0);
-  return true;
- } else
-  return false;
-}
-
-function fnFastScrollTabs(fDir)
-{
- if (c_lTabs>16)
-  frames['frTabs'].scroll(g_rglTabX[fDir?c_lTabs-1:0],0);
- else
-  if (fnScrollTabs(fDir)>0) window.setTimeout("fnFastScrollTabs("+fDir+");",5);
-}
-
-function fnSetTabProps(iTab,fActive)
-{
- var iCol=fnTabToCol(iTab);
- var i;
-
- if (iTab>=0) {
-  with (frames['frTabs'].document.all) {
-   with (tbTabs) {
-    for (i=0;i<=4;i++) {
-     with (rows[i]) {
-      if (i==0)
-       cells[iCol].style.background=c_rgszClr[fActive?0:2];
-      else if (i>0 && i<4) {
-       if (fActive) {
-        cells[iCol-1].style.background=c_rgszClr[2];
-        cells[iCol].style.background=c_rgszClr[0];
-        cells[iCol+1].style.background=c_rgszClr[2];
-       } else {
-        if (i==1) {
-         cells[iCol-1].style.background=c_rgszClr[2];
-         cells[iCol].style.background=c_rgszClr[1];
-         cells[iCol+1].style.background=c_rgszClr[2];
-        } else {
-         cells[iCol-1].style.background=c_rgszClr[4];
-         cells[iCol].style.background=c_rgszClr[(i==2)?2:4];
-         cells[iCol+1].style.background=c_rgszClr[4];
-        }
-       }
-      } else
-       cells[iCol].style.background=c_rgszClr[fActive?2:4];
-     }
-    }
-   }
-   with (aTab[iTab].style) {
-    cursor=(fActive?"default":"hand");
-    color=c_rgszClr[3];
-   }
-  }
- }
-}
-
-function fnMouseOverScroll(iCtl)
-{
- frames['frScroll'].document.all.tdScroll[iCtl].style.color=c_rgszClr[7];
-}
-
-function fnMouseOutScroll(iCtl)
-{
- frames['frScroll'].document.all.tdScroll[iCtl].style.color=c_rgszClr[6];
-}
-
-function fnMouseOverTab(iTab)
-{
- if (iTab!=g_iShCur) {
-  var iCol=fnTabToCol(iTab);
-  with (frames['frTabs'].document.all) {
-   tdTab[iTab].style.background=c_rgszClr[5];
-  }
- }
-}
-
-function fnMouseOutTab(iTab)
-{
- if (iTab>=0) {
-  var elFrom=frames['frTabs'].event.srcElement;
-  var elTo=frames['frTabs'].event.toElement;
-
-  if ((!elTo) ||
-   (elFrom.tagName==elTo.tagName) ||
-   (elTo.tagName=="A" && elTo.parentElement!=elFrom) ||
-   (elFrom.tagName=="A" && elFrom.parentElement!=elTo)) {
-
-   if (iTab!=g_iShCur) {
-    with (frames['frTabs'].document.all) {
-     tdTab[iTab].style.background=c_rgszClr[1];
-    }
-   }
-  }
- }
-}
-
-function fnSetActiveSheet(iSh)
-{
- if (iSh!=g_iShCur) {
-  fnSetTabProps(g_iShCur,false);
-  fnSetTabProps(iSh,true);
-  g_iShCur=iSh;
- }
-}
-
- window.g_iIEVer=fnGetIEVer();
- if (window.g_iIEVer>=4)
-  fnBuildFrameset();
-//-->
-</script>
-<![endif]><!--[if gte mso 9]><xml>
- <x:ExcelWorkbook>
-  <x:ExcelWorksheets>
-   <x:ExcelWorksheet>
-    <x:Name>Sheet1</x:Name>
-    <x:WorksheetSource HRef="2028.files/sheet001.htm"/>
-   </x:ExcelWorksheet>
-  </x:ExcelWorksheets>
-  <x:Stylesheet HRef="2028.files/stylesheet.css"/>
-  <x:WindowHeight>12255</x:WindowHeight>
-  <x:WindowWidth>28800</x:WindowWidth>
-  <x:WindowTopX>0</x:WindowTopX>
-  <x:WindowTopY>0</x:WindowTopY>
-  <x:ProtectStructure>False</x:ProtectStructure>
-  <x:ProtectWindows>False</x:ProtectWindows>
- </x:ExcelWorkbook>
-</xml><![endif]-->
+<link rel=File-List href="index.files/filelist.xml">
+<style id="index_20516_Styles">
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+.font520516
+	{color:windowtext;
+	font-size:8.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;}
+.xl6420516
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl6520516
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl6620516
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl6720516
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+ruby
+	{ruby-align:left;}
+rt
+	{color:windowtext;
+	font-size:8.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"맑은 고딕", monospace;
+	mso-font-charset:129;
+	mso-char-type:none;}
+-->
+</style>
 </head>
 
-<frameset rows="*,39" border=0 width=0 frameborder=no framespacing=0>
- <frame src="2028.files/sheet001.htm" name="frSheet">
- <frame src="2028.files/tabstrip.htm" name="frTabs" marginwidth=0 marginheight=0>
- <noframes>
-  <body>
-   <p>이 페이지에는 프레임이 있지만 사용 중인 브라우저에서 프레임을 지원하지 않습니다.</p>
-  </body>
- </noframes>
-</frameset>
+<body>
+<!--[if !excel]>　　<![endif]-->
+<!--다음 내용은 Microsoft Excel의 웹 페이지로 게시 마법사를 사용하여 작성되었습니다.-->
+<!--같은 내용의 항목이 다시 게시되면 DIV 태그 사이에 있는 내용이 변경됩니다.-->
+<!----------------------------->
+<!--Excel의 웹 페이지 마법사로 게시해서 나온 결과의 시작 -->
+<!----------------------------->
+
+<div id="index_20516" align=center x:publishsource="Excel">
+
+<table border=0 cellpadding=0 cellspacing=0 width=576 class=xl6420516
+ style='border-collapse:collapse;table-layout:fixed;width:432pt'>
+ <col class=xl6420516 width=72 span=5 style='width:54pt'>
+ <col class=xl6720516 width=72 style='width:54pt'>
+ <col class=xl6420516 width=72 span=2 style='width:54pt'>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 width=72 style='height:16.5pt;width:54pt'>DIST</td>
+  <td class=xl6520516 width=72 style='border-left:none;width:54pt'>RELION</td>
+  <td class=xl6520516 width=72 style='border-left:none;width:54pt'>EIGEN</td>
+  <td class=xl6520516 width=72 style='border-left:none;width:54pt'>PROF</td>
+  <td class=xl6520516 width=72 style='border-left:none;width:54pt'>RA</td>
+  <td class=xl6620516 width=72 style='border-left:none;width:54pt'>RANK</td>
+  <td class=xl6520516 width=72 style='border-left:none;width:54pt'>DEV</td>
+  <td class=xl6520516 width=72 style='border-left:none;width:54pt'>PREF</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=8 height=176 class=xl6520516 style='height:132.0pt;border-top:
+  none'>S</td>
+  <td rowspan=5 class=xl6520516 style='border-top:none'>AO</td>
+  <td rowspan=4 class=xl6520516 style='border-top:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>2</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A+</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>8</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>76</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>160</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>91</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=3 height=66 class=xl6520516 style='height:49.5pt;border-top:none'>ST</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>153</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>90</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>S/A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>Q</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>68</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A+</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=7 height=154 class=xl6520516 style='height:115.5pt;border-top:
+  none'>A</td>
+  <td rowspan=4 class=xl6520516 style='border-top:none'>AO</td>
+  <td rowspan=4 class=xl6520516 style='border-top:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>12</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>S-</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>77</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>LOCK</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>S-</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>84</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>142</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=3 height=66 class=xl6520516 style='height:49.5pt;border-top:none'>ST</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>156</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>C</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=2 height=44 class=xl6520516 style='height:33.0pt;border-top:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>60</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>129</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A+</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=7 height=154 class=xl6520516 style='height:115.5pt;border-top:
+  none'>L</td>
+  <td rowspan=3 class=xl6520516 style='border-top:none'>AO</td>
+  <td rowspan=3 class=xl6520516 style='border-top:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>88</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A+</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>119</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>LOCK</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A+</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>196</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A+</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=4 height=88 class=xl6520516 style='height:66.0pt;border-top:none'>ST</td>
+  <td rowspan=3 class=xl6520516 style='border-top:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>85</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>128</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>143</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>Q</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>70</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=6 height=132 class=xl6520516 style='height:99.0pt;border-top:
+  none'>R</td>
+  <td rowspan=2 class=xl6520516 style='border-top:none'>AO</td>
+  <td rowspan=2 class=xl6520516 style='border-top:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>65</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A+</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>108</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=4 height=88 class=xl6520516 style='height:66.0pt;border-top:none'>ST</td>
+  <td rowspan=3 class=xl6520516 style='border-top:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>99</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>LOCK</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>118</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>144</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>LOCK</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>Q</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>179</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=8 height=176 class=xl6520516 style='height:132.0pt;border-top:
+  none'>C</td>
+  <td rowspan=3 class=xl6520516 style='border-top:none'>AO</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>175</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>S-</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=2 height=44 class=xl6520516 style='height:33.0pt;border-top:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>127</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A+</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>169</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=2 height=44 class=xl6520516 style='height:33.0pt;border-top:none'>ST</td>
+  <td rowspan=2 class=xl6520516 style='border-top:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>113</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A+</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>136</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=3 height=66 class=xl6520516 style='height:49.5pt;border-top:none'>SU</td>
+  <td rowspan=3 class=xl6520516 style='border-top:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>37</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>SS</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>62</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>SS</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>150</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=6 height=132 class=xl6520516 style='height:99.0pt;border-top:
+  none'>A</td>
+  <td rowspan=2 class=xl6520516 style='border-top:none'>AO</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>139</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>112</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=3 height=66 class=xl6520516 style='height:49.5pt;border-top:none'>ST</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>154</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=2 height=44 class=xl6520516 style='height:33.0pt;border-top:none'>Q</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>75</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>86</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A+</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>SU</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>Q</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>189</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=7 height=154 class=xl6520516 style='height:115.5pt;border-top:
+  none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>AO</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>114</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A+</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=5 height=110 class=xl6520516 style='height:82.5pt;border-top:
+  none'>ST</td>
+  <td rowspan=3 class=xl6520516 style='border-top:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>51</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>98</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>LOCK</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>161</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>52</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>C</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>Q</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>155</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>SU</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>97</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=3 height=66 class=xl6520516 style='height:49.5pt;border-top:none'>R</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>AO</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>93</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=2 height=44 class=xl6520516 style='height:33.0pt;border-top:none'>SU</td>
+  <td rowspan=2 class=xl6520516 style='border-top:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>59</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A+</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>173</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=2 height=44 class=xl6520516 style='height:33.0pt;border-top:none'>Avg</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>AO</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>Q</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>96</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>SS</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>ST</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>106</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td rowspan=2 height=44 class=xl6520516 style='height:33.0pt;border-top:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>AO</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>167</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>A</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none;
+  border-left:none'>ST</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>Q</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>163</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>S</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl6520516 style='height:16.5pt;border-top:none'>F</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>ST</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>195</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>H</td>
+  <td class=xl6620516 style='border-top:none;border-left:none'>B</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>0.5</td>
+  <td class=xl6520516 style='border-top:none;border-left:none'>1.5</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</div>
+
+
+<!----------------------------->
+<!--Excel의 웹 페이지 마법사로 게시해서 나온 결과의 끝-->
+<!----------------------------->
+</body>
+
 </html>
