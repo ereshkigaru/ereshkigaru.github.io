@@ -1,0 +1,401 @@
+<html>
+<head>
+<title>위작영령 계산기 v1.0</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="페그오,위작영령,사과,에레쟝애껴욧">
+<meta name="author" content="Eresh196">
+<link rel=File-List href="temp_files/filelist.xml">
+<style id="Eresh196_Styles">
+table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+.font510123
+	{color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:italic;
+	text-decoration:none;
+	font-family:"맑은 고딕", "Malgun Gothic", sans-serif;
+	mso-font-charset:129;}
+.font610123
+	{color:red;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:italic;
+	text-decoration:none;
+	font-family:"맑은 고딕", "Malgun Gothic", sans-serif;
+	mso-font-charset:129;}
+.font710123
+	{color:#0070C0;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:italic;
+	text-decoration:none;
+	font-family:"맑은 고딕", "Malgun Gothic", sans-serif;
+	mso-font-charset:129;}
+.xl1510123
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"맑은 고딕", "Malgun Gothic", sans-serif;
+	mso-font-charset:129;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl6710123, .xl6710123_1, .xl6710123_2
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:#3F3F3F;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"맑은 고딕", "Malgun Gothic", sans-serif;
+	mso-font-charset:129;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border:.5pt solid #3F3F3F;
+	background:#F2F2F2;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl6710123_1
+	{background-image:url(S0.png);
+	background-size:contain;
+	background-repeat:no-repeat;}
+.xl6710123_2
+	{background-image:url(CE0.png);
+	background-size:contain;
+	background-repeat:no-repeat;}
+.xl6810123
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"맑은 고딕", "Malgun Gothic", sans-serif;
+	mso-font-charset:129;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:center;
+	border:.5pt solid windowtext;
+	background:white;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl6910123
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"맑은 고딕", "Malgun Gothic", sans-serif;
+	mso-font-charset:129;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:white;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl7010123
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:italic;
+	text-decoration:none;
+	font-family:"맑은 고딕", "Malgun Gothic", sans-serif;
+	mso-font-charset:129;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl7110123
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"맑은 고딕", "Malgun Gothic", sans-serif;
+	mso-font-charset:129;
+	mso-number-format:0%;
+	text-align:center;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:white;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl7210123
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"맑은 고딕", "Malgun Gothic", sans-serif;
+	mso-font-charset:129;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#FFC000;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl7310123
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:italic;
+	text-decoration:none;
+	font-family:"맑은 고딕", "Malgun Gothic", sans-serif;
+	mso-font-charset:129;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:white;
+	mso-pattern:black none;
+	white-space:nowrap;}
+body{
+	font-family:'맑은 고딕', 'Malgun Gothic';
+	background-image: url('ereshkigal_lvls.png');
+}
+</style>
+</head>
+
+<body>
+<div id="Eresh196" align=center>
+
+<table border=0 cellpadding=0 cellspacing=0 width=964 style='border-collapse:collapse;table-layout:fixed;width:720pt'>
+	<col width=64 style='width:48pt'>
+	<col width=150 span=6 style='mso-width-source:userset;mso-width-alt:5319;width:112pt'>
+	<tr height=26 style='height:19.95pt'>
+ 	<td height=26 class=xl1510123 style='height:19.95pt'></td>
+ 	<td colspan=3 class=xl7310123 style='border: none; background: none'><font class="font610123"><b>Starting</b></font><font class="font510123"><b> Member</b></font></td>
+ 	<td colspan=3 class=xl7310123 style='border: none; background: none'><font class="font710123"><b>Sub</b></font><font class="font510123"><b> Member</b></font></td>
+	</tr>
+	<tr height=266 style='height:169.45pt'>
+ 	<td height=266 class=xl1510123 style='height:169.45pt'></td>
+ 	<td class=xl6710123_1><br></br><br></br><br></br><select id="S1"><option value="3">3기사</option><option value="4">4기사</option><option value="0">엑스트라</option></select></td>
+ 	<td class=xl6710123_1><br></br><br></br><br></br><select id="S2"><option value="3">3기사</option><option value="4">4기사</option><option value="0">엑스트라</option></select></td>
+ 	<td class=xl6710123_1><br></br><br></br><br></br><select id="S3"><option value="3">3기사</option><option value="4">4기사</option><option value="0">엑스트라</option></select></td>
+ 	<td class=xl6710123_1><br></br><br></br><br></br><select id="S4"><option value="3">3기사</option><option value="4">4기사</option><option value="0">엑스트라</option></select></td>
+ 	<td class=xl6710123_1><br></br><br></br><br></br><select id="S5"><option value="3">3기사</option><option value="4">4기사</option><option value="0">엑스트라</option></select></td>
+ 	<td class=xl6710123_1><br></br><br></br><br></br><select id="S6"><option value="3">3기사</option><option value="4">4기사</option><option value="0">엑스트라</option></select></td>
+	</tr>
+	<tr height=66 style='height:49.95pt'>
+ 	<td height=66 class=xl1510123 style='height:49.95pt'></td>
+ 	<td class=xl6710123_2><select id="CE1"><option value="0">칼데아 현학 (풀돌)</option><option value="1">칼데아 현학 (노돌)</option><option value="2">이끄는 소녀 (풀돌)</option><option value="3">이끄는 소녀 (노돌)</option><option value="4">자비없는 자 (풀돌)</option><option value="5">자비없는 자 (노돌)</option><option value="6">기타</option></select></td>
+ 	<td class=xl6710123_2><select id="CE2"><option value="0">칼데아 현학 (풀돌)</option><option value="1">칼데아 현학 (노돌)</option><option value="2">이끄는 소녀 (풀돌)</option><option value="3">이끄는 소녀 (노돌)</option><option value="4">자비없는 자 (풀돌)</option><option value="5">자비없는 자 (노돌)</option><option value="6">기타</option></select></td>
+ 	<td class=xl6710123_2><select id="CE3"><option value="0">칼데아 현학 (풀돌)</option><option value="1">칼데아 현학 (노돌)</option><option value="2">이끄는 소녀 (풀돌)</option><option value="3">이끄는 소녀 (노돌)</option><option value="4">자비없는 자 (풀돌)</option><option value="5">자비없는 자 (노돌)</option><option value="6">기타</option></select></td>
+ 	<td class=xl6710123_2><select id="CE4"><option value="0">칼데아 현학 (풀돌)</option><option value="1">칼데아 현학 (노돌)</option><option value="2">이끄는 소녀 (풀돌)</option><option value="3">이끄는 소녀 (노돌)</option><option value="4">자비없는 자 (풀돌)</option><option value="5">자비없는 자 (노돌)</option><option value="6">기타</option></select></td>
+ 	<td class=xl6710123_2><select id="CE5"><option value="0">칼데아 현학 (풀돌)</option><option value="1">칼데아 현학 (노돌)</option><option value="2">이끄는 소녀 (풀돌)</option><option value="3">이끄는 소녀 (노돌)</option><option value="4">자비없는 자 (풀돌)</option><option value="5">자비없는 자 (노돌)</option><option value="6">기타</option></select></td>
+ 	<td class=xl6710123_2><select id="CE6"><option value="0">칼데아 현학 (풀돌)</option><option value="1">칼데아 현학 (노돌)</option><option value="2">이끄는 소녀 (풀돌)</option><option value="3">이끄는 소녀 (노돌)</option><option value="4">자비없는 자 (풀돌)</option><option value="5">자비없는 자 (노돌)</option><option value="6">기타</option></select></td>
+	</tr>
+	<tr height=19 style='height:14.4pt'>
+ 	<td height=19 class=xl1510123 style='height:14.4pt'></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=26 style='height:19.95pt'>
+ 	<td height=26 class=xl1510123 style='height:19.95pt'></td>
+ 	<td class=xl7210123><b>프리퀘 구분</b></td>
+ 	<td class=xl6910123><select id="MU"><option value="7">베키오 (1/10)</option><option value="6">암브로시아니 (1/11)</option><option value="5">차르토리스키 (1/12)</option><option value="4">우피치 (1/13)</option><option value="3">바티칸 (1/14)</option><option value="2">그라치에 (1/15)</option><option value="1">에르미타주 (1/16)</option><option value="0" selected="selected">루브르 (1/16)</option></select></td>
+ 	<td class=xl1510123></td>
+ 	<td colspan=2 class=xl7010123>※ 루브르: 원고 최고효율, 차르토리스키: 심장 최고효율</td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=19 style='height:14.4pt'>
+ 	<td height=19 class=xl1510123 style='height:14.4pt'></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=26 style='height:19.95pt'>
+ 	<td height=26 class=xl1510123 style='height:19.95pt'></td>
+ 	<td class=xl7210123><b>마스터 레벨</b></td>
+ 	<td class=xl6910123><input id="LV" type="number" min="1" max="140" value="140"></td>
+ 	<td class=xl1510123></td>
+ 	<td colspan=2 class=xl7010123>※ 150렙 상한 개방은 2020년 7월 중순</td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=19 style='height:14.4pt'>
+ 	<td height=19 class=xl1510123 style='height:14.4pt'></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=19 style='height:14.4pt'>
+ 	<td height=19 class=xl1510123 style='height:14.4pt'></td>
+ 	<td class=xl1510123 colspan=2><input id="done" type="button" style="width:100%" value="계산하기" onclick="erelove()" /></td>
+ 	<td class=xl1510123></td>
+ 	<td colspan=2 class=xl7010123><b style="color:red">Developed by Eresh196 <a href="https://twitter.com/eresh196">Twitter</a> <a href="https://www.youtube.com/channel/UC22UHF9zaFxbvt6AwcCRfBg">Youtube</a><b></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=19 style='height:14.4pt'>
+ 	<td height=19 class=xl1510123 style='height:14.4pt'></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=26 style='height:19.95pt'>
+ 	<td height=26 class=xl1510123 style='height:19.95pt'></td>
+ 	<td class=xl7210123><b>진짜 보너스</b></td>
+ 	<td class=xl6910123 id="Plus_Jin">0</td>
+ 	<td class=xl1510123></td>
+ 	<td colspan=2 class=xl7010123>※ 원고(진짜) 드롭 획득수 증가량</td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=19 style='height:14.4pt'>
+ 	<td height=19 class=xl1510123 style='height:14.4pt'></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=26 style='height:19.95pt'>
+ 	<td height=26 class=xl1510123 style='height:19.95pt'></td>
+ 	<td class=xl7210123><b>가짜 보너스</b></td>
+ 	<td class=xl6910123 id="Plus_Wii">0</td>
+ 	<td class=xl1510123></td>
+ 	<td colspan=2 class=xl7010123>※ 원고(가짜) 드롭 획득수 증가량</td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=19 style='height:14.4pt'>
+ 	<td height=19 class=xl1510123 style='height:14.4pt'></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=26 style='height:19.95pt'>
+ 	<td height=26 class=xl1510123 style='height:19.95pt'></td>
+ 	<td class=xl7210123><b>진짜 출현률</b></td>
+ 	<td class=xl7110123 id="Prob_Jin">100%</td>
+ 	<td class=xl1510123></td>
+ 	<td colspan=2 class=xl7010123>※ 원고(진짜)를 드랍하는 진짜 유형 적의 출현 확률 (기본 100%)</td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=19 style='height:14.4pt'>
+ 	<td height=19 class=xl1510123 style='height:14.4pt'></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=26 style='height:19.95pt'>
+ 	<td height=26 class=xl1510123 style='height:19.95pt'></td>
+ 	<td class=xl7210123><b>가짜 출현률</b></td>
+ 	<td class=xl7110123 id="Prob_Wii">100%</td>
+ 	<td class=xl1510123></td>
+ 	<td colspan=2 class=xl7010123>※ 원고(가짜)를 드랍하는 가짜 유형 적의 출현확률 (기본 100%)</td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=19 style='height:14.4pt'>
+ 	<td height=19 class=xl1510123 style='height:14.4pt'></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=26 style='height:19.95pt'>
+ 	<td height=26 class=xl1510123 style='height:19.95pt'></td>
+ 	<td class=xl7210123><b>사과 효율값</b></td>
+ 	<td class=xl7210123 style="background-image:url(APPLE.png);background-size:contain;background-repeat:no-repeat"><b>통합</b></td>
+ 	<td class=xl7210123 style="background-image:url(APPLE.png);background-size:contain;background-repeat:no-repeat"><b>진짜</b></td>
+ 	<td class=xl7210123 style="background-image:url(APPLE.png);background-size:contain;background-repeat:no-repeat"><b>가짜</b></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=133 style='height:75.05pt'>
+ 	<td height=133 class=xl1510123 style='height:75.05pt'></td>
+ 	<td class=xl6810123 style="background: url(APPLE0.png) no-repeat center; background-size: 75px;"></td>
+ 	<td class=xl6810123 style="font-size: 24pt" id="AT"></td>
+ 	<td class=xl6810123 style="font-size: 24pt" id="AJ"></td>
+ 	<td class=xl6810123 style="font-size: 24pt" id="AW"></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=19 style='height:14.4pt'>
+ 	<td height=19 class=xl1510123 style='height:14.4pt'></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=26 style='height:19.95pt'>
+ 	<td height=26 class=xl1510123 style='height:19.95pt'></td>
+ 	<td colspan=4 class=xl7010123>※ 진짜, 가짜는 각각 룰렛(진짜), 룰렛(가짜)을 1바퀴 도는데 필요한 사과의 개수</td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>
+	<tr height=26 style='height:19.95pt'>
+ 	<td height=26 class=xl1510123 style='height:19.95pt'></td>
+ 	<td colspan=4 class=xl7010123>※ 통합은 진짜, 가짜 구분없이 원고를 룰렛 1바퀴분(600개) 모으는데 필요한 사과의 개수</td>
+ 	<td class=xl1510123></td>
+ 	<td class=xl1510123></td>
+	</tr>	
+</table>
+</div>
+</body>
+	<script type="text/javascript" src="erelove.js"></script>
+</html>
